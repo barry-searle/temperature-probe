@@ -98,9 +98,11 @@ def loop():
 		time.sleep(1)
 		if  int(dt_second)==0 and int(dt_minute)%5==0:
 			if read() != None:
-				print ("Current temperature : %0.3f C" % read())
-				publish()
-
+				try:
+					print ("Current temperature : %0.3f C" % read())
+					publish()
+				except :
+					print("Error occurred attempting to publish")
 def destroy():
 	pass
 
