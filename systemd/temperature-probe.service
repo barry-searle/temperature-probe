@@ -1,0 +1,17 @@
+[Unit]
+Description=Raspberry Pi Temperature Probe Pub/Sub Publisher
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/Documents/dev/temperature-probe/picode
+ExecStart=/usr/bin/python -u /home/pi/Documents/dev/temperature-probe/picode/26_ds18b20.py
+Restart=always
+RestartSec=30
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

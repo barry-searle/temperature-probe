@@ -1,0 +1,24 @@
+# Credentials and sensitive keys
+*.json
+*.pem
+*.key
+*.p12
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.py.orig
+
+# Log files and archives
+*.log
+*.log.gz
+*.out
+
+# Environment variables & local configs
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
